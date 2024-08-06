@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, #e71bdd, #2575fc);
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+main {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+form input, form button, .select-container select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+form input {
+    flex: 1;
+}
+
+form button {
+    background: #209e4a;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background: #209e4a;
+}
+
+.select-container {
+    position: relative;
+}
+
+.select-container select {
+    appearance: none;
+    background: #209e4a;
+    color: #fff;
+    cursor: pointer;
+    padding-right: 30px; /* Add padding to avoid overlap */
+}
+
+.select-container::after {
+    content: "\25BC";
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.select-container select:hover + ::after {
+    color: #e0a800;
+}
+
+.task-container {
+    max-width: 400px;
+    width: 100%;
+}
+
+.task-list {
+    list-style: none;
+}
+
+.task {
+    background: #fff;
+    color: #271818;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+}
+
+.task.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-actions {
+    display: flex;
+    gap: 5px;
+}
+
+.task-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.task-actions button:hover {
+    color: #c2e20de0;
+}
